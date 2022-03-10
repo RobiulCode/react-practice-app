@@ -1,0 +1,26 @@
+[
+  {
+    "name": "Robiul",
+    "designation": "Executive",
+    "section": "Biscuit",
+    "id": "B-001"
+  },
+  {
+    "name": "Jakir",
+    "designation": "Executive",
+    "section": "Biscuit",
+    "id": "B-002"
+  },
+  {
+    "name": "Nironjon",
+    "designation": "Executive",
+    "section": "Cake",
+    "id": "CK-001"
+  },
+  {
+    "name": "Dilruba",
+    "designation": "Executive",
+    "section": "Bakery",
+    "id": "BK-001"
+  }
+]
