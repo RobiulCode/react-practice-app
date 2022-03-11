@@ -58,7 +58,7 @@ class Counter extends Component{
                             <div className="control">
                                 <button className='button' onClick={this.start}>Start</button>
                                 <button className='button' onClick={this.stop}>Stop</button>
-                                <button className='button'>Reset</button>
+                                <button className='button' onClick={this.reset}>Reset</button>
                             </div>
                         </div>
                 </div>

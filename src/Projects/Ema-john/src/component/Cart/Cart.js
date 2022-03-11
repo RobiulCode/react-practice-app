@@ -1,7 +1,6 @@
 import React from 'react'
-import { Link } from 'react-router-dom'
 
-const Cart=({cart})=> {
+const Cart=({cart,children})=> {
 
   //fixed number convert
   const fixed=(number)=>{
@@ -30,14 +29,7 @@ const Cart=({cart})=> {
       <p>shipping Fee: {shipping}</p>
       <p>Vat + Tax: {tax}</p>
       <p>Total price: {grandTotal}</p>
-      <table>
-        <tbody>
-          
-        </tbody>
-      </table>
-      <Link to='/review'>
-        <button className="bg-blue-400 py-1 px-6 mt-2 rounded  flex items-center">Review Order</button>
-      </Link>
+      {children}
     </div>
   )
 }
