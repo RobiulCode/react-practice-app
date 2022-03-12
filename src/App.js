@@ -1,11 +1,11 @@
 import React from 'react';
 import './App.css';
-import EmaApp from'./Projects/Ema-john/EmaApp'
+import ConditionApp from './Projects/ConditionalRender/ConditionApp';
 
 function App() {
   return (
     <div className="">
-       <EmaApp />
+       <ConditionApp></ConditionApp>
     </div>
   );
 }
