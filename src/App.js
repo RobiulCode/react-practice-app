@@ -1,11 +1,11 @@
 import React from 'react';
 import './App.css';
-import ConditionApp from './Projects/ConditionalRender/ConditionApp';
+import CountryApp from './Projects/CountryApp/CountryApp';
 
 function App() {
   return (
     <div className="">
-       <ConditionApp></ConditionApp>
+       <CountryApp></CountryApp>
     </div>
   );
 }
