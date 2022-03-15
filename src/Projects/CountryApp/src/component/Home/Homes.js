@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import { HiOutlineSearch } from "react-icons/hi";
 import Country from '../Country/Country';
+import { FaSpinner } from "react-icons/fa";
 
 const Home = () => {
     const [countries,setCountries] = useState([])
@@ -26,20 +27,33 @@ const Home = () => {
         const data = await response.json();
         await setCountries(data)
     }
-    console.log(countries);
+    const value = countries.length
+    console.log(value);
     return (
-        <div className="px-24 py-6 bg-slate-300">
-           <div className="space-y-2 md:flex md:justify-between">
+        <div className="">
+           <div className="space-y-2 md:flex md:justify-between px-24 py-4 bg-slate-300">
                <p className="text-2xl font-medium">Where is your country</p>
                 <div className="md:flex md:justify-center items-center">
-                    <input type="text" placeholder="Seach by name" className="py-1 px-3 rounded outline-none" onChange={getSearch}/>
+                    <input type="text" placeholder="Search by name" className="py-1 px-3 rounded outline-none" onChange={getSearch}/>
                     <button className="-ml-8 bg-blue-500 rounded-full p-1 text-white" onClick={search}><HiOutlineSearch/></button>
                 </div>
            </div>
-           <div className="md:grid md:grid-cols-2 md:gap-4 mt-6">
-                {
-                    countries.map((country,index) => <Country country={country} key={index}></Country>)
-                }
+           <div className="w-11/12 mx-auto p-4">
+            {
+                value>0 ? 
+                            <div className="md:grid md:grid-cols-2 md:gap-4 mt-6">
+                                {
+                                    countries.map((country,index) => <Country country={country} key={index}></Country>)
+                                }
+                            </div>
+                            :
+                            <div className="w-1/4 mx-auto mt-24 bg-gray-200 p-10 shadow-md rounded relative">
+                                <div className="animate-spin absolute top-4">
+                                    <span className='animate-spin bg-red-500 '><FaSpinner/></span>
+                                </div>
+                                <p className='text-blue-800 '>Please Wait...........</p>
+                            </div>
+            }
            </div>
         </div>
     );
