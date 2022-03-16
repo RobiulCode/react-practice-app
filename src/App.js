@@ -1,11 +1,12 @@
 import React from 'react';
-import './App.css';
-import CountryApp from './Projects/CountryApp/CountryApp';
+import PostApp from './Projects/PostApp/App';
+
 
 function App() {
+  
   return (
     <div className="">
-       <CountryApp></CountryApp>
+        <PostApp/>
     </div>
   );
 }
